@@ -43,7 +43,11 @@ return {
   },
   {
     'MeanderingProgrammer/render-markdown.nvim',
-    ft = { "markdown", "md", "rmd", "telekasten" },
+    ft = {
+      "markdown", "md", "rmd",
+      "telekasten",
+      "codecompanion"
+    },
     dependencies = { 
       -- 'nvim-treesitter/nvim-treesitter',
       'echasnovski/mini.nvim'

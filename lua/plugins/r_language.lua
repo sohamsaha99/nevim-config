@@ -19,7 +19,7 @@ return {
     -- ft = { "r", "rmd", "quarto" },
     dependencies = { "saghen/blink.cmp" },
     config = function()
-      print(os.date("%H:%M:%S"))
+      -- print(os.date("%H:%M:%S"))
       local lspconfig = require("lspconfig")
       local capabilities = require("blink.cmp").get_lsp_capabilities()
       lspconfig.r_language_server.setup({

@@ -75,3 +75,4 @@ make
 This will give you a `libtree-sitter-r.so` file.
 Rename it to `r.so` and put it under `nvim/parser` directory.
 Additionally, grab the `.scm` files under `queries/` directory and put them in `nvim/queries/r/`.
+Then you can remove the directory `tree-sitter-r`.

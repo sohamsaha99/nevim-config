@@ -19,18 +19,20 @@ return {
 
     require("codecompanion").setup({
       adapters = {
-        openai = function()
-          return require("codecompanion.adapters").extend("openai", {
-            env = {
-              api_key = vim.env.OPENAI_API_KEY,
-            },
-            schema = {
-              model = {
-                default = "gpt-5",
+        http = {
+          openai = function()
+            return require("codecompanion.adapters").extend("openai", {
+              env = {
+                api_key = vim.env.OPENAI_API_KEY,
               },
-            },
-          })
-        end,
+              schema = {
+                model = {
+                  default = "gpt-5",
+                },
+              },
+            })
+          end,
+        },
       },
       strategies = {
         chat = {

@@ -1,6 +1,7 @@
 return {
   {
     "R-nvim/R.nvim",
+    -- "jalvesaq/Vim-R",
     -- ft = { "r", "rmd" },
     -- build = ":call RBuild()",
     opts = {

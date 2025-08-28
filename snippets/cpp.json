@@ -1,0 +1,24 @@
+{
+  "CP File template": {
+    "prefix": "cpmacro",
+    "body": [
+      "/*Problem $1*/",
+      "#include <bits/stdc++.h>",
+      "#include <cstdio>",
+      "#define LOCAL_ENV 0",
+      "",
+      "using namespace std;",
+      "",
+      "int main (int argc, char *argv[]) {",
+      "#if LOCAL_ENV == 1",
+      "freopen(\"../test_cases/input.txt\", \"r\", stdin);",
+      "freopen(\"../test_cases/output.txt\", \"w\", stdout);",
+      "#endif // LOCAL_ENV == 1",
+      "",
+      "\t$0",
+      "\treturn 0;",
+      "}"
+    ],
+    "description": "A standard starting point for a C++ program to solve competitive programming"
+  }
+}

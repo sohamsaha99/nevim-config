@@ -1,0 +1,20 @@
+{
+  "name": "personal_snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "tex",
+          "latex"
+        ],
+        "path": "./tex.json"
+      },
+      {
+        "language": [
+          "cpp"
+        ],
+        "path": "./cpp.json"
+      }
+    ]
+  }
+}

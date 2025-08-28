@@ -74,6 +74,16 @@ return {
             symbols = { added = " ", modified = " ", removed = " " },
             colored = false,
           },
+          {
+            function()
+              if vim.wo.spell then
+                return '󰓆' -- spellcheck on
+              else
+                return ''
+              end
+            end,
+            color = { fg = '#ff9e64', gui = 'bold' }, -- optional highlight
+          },
         },
         lualine_x = {
           {

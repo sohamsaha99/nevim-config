@@ -1,0 +1,82 @@
+{
+    "tilde": {
+      "prefix": "@til",
+      "body": "\\tilde{${1:${TM_SELECTED_TEXT}}}$0",
+      "description": "tilde"
+    },
+    "superscript": {
+        "prefix": "@sup",
+        "body": "^{${1:${TM_SELECTED_TEXT}}}",
+        "description": "superscript"
+    },
+    "etc": {
+        "prefix": "@dots",
+        "body": "\\ldots",
+        "description": "\\ldots"
+    },
+    "cdot": {
+        "prefix": "",
+        "body": "\\cdot",
+        "description": "\\cdot"
+    },
+    "fraction": {
+        "prefix": "@frac",
+        "body": "\\frac{$1}{$2}$0",
+        "description": "fraction"
+    },
+    "hat": {
+        "prefix": "@hat",
+        "body": "\\hat{${1:${TM_SELECTED_TEXT}}}$0",
+        "description": "hat"
+    },
+    "equiv": {
+        "prefix": "@eqv",
+        "body": "\\equiv",
+        "description": "equiv symbol"
+    },
+    "times": {
+        "prefix": "@times",
+        "body": "\\times",
+        "description": "times symbol"
+    },
+    "leq": {
+        "prefix": "@lq",
+        "body": "\\leq",
+        "description": "leq symbol"
+    },
+    "geq": {
+        "prefix": "@gq",
+        "body": "\\geq",
+        "description": "geq symbol"
+    },
+    "nonumber": {
+        "prefix": "nonum",
+        "body": "\\nonumber",
+        "description": "nonumber"
+    },
+    "wedge": {
+        "prefix": "wedge",
+        "body": "\\wedge",
+        "description": "wedge"
+    },
+    "(": {
+        "prefix": "br1",
+        "body": "\\left( ${1:${TM_SELECTED_TEXT}} \\right)",
+        "description": "left( ... right)"
+    },
+    "{": {
+        "prefix": "br2",
+        "body": "\\left\\{ ${1:${TM_SELECTED_TEXT}} \\right\\\\\\}",
+        "description": "left{ ... right}"
+    },
+    "[": {
+        "prefix": "br3",
+        "body": "\\left[ ${1:${TM_SELECTED_TEXT}} \\right]",
+        "description": "left[ ... right]"
+    },
+    "Display Math — \\[ … \\]": {
+        "prefix": "@math",
+        "body": ["\\[", "\t$TM_SELECTED_TEXT$1", "\\]"],
+        "description": "Display Math"
+    }
+}

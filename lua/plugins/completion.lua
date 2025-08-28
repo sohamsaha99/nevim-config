@@ -1,7 +1,20 @@
 return {
   'saghen/blink.cmp',
   -- optional: provides snippets for the snippet source
-  dependencies = { 'rafamadriz/friendly-snippets' },
+  dependencies = { 
+    {
+      'L3MON4D3/LuaSnip',
+      -- 'echasnovski/mini.snippets',
+      dependencies = { 'rafamadriz/friendly-snippets' },
+      version = 'v2.*',
+      config = function()
+        require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./snippets" } })
+        require("luasnip.loaders.from_vscode").lazy_load() -- friendly-snippets
+        -- Optional: make LaTeX snippets show in 'tex' buffers too
+        require("luasnip").filetype_extend("tex", { "latex" })
+      end,
+    },
+  },
 
   -- use a release tag to download pre-built binaries
   version = '1.*',
@@ -30,8 +43,9 @@ return {
     appearance = {
       -- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
       -- Adjusts spacing to ensure icons are aligned
-      nerd_font_variant = 'mono'
+      nerd_font_variant = 'normal'
     },
+    snippets = { preset = 'luasnip' },
 
     -- (Default) Only show the documentation popup when manually triggered
     completion = { documentation = { auto_show = false } },
@@ -43,6 +57,12 @@ return {
       -- For latex
       per_filetype = {
         tex = { inherit_defaults = true, "omni" }
+      },
+      providers = {
+        snippets = {
+          -- snippets show up with just 1 character
+          min_keyword_length = 1,
+        },
       },
     },
 

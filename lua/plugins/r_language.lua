@@ -4,6 +4,7 @@ return {
     -- "jalvesaq/Vim-R",
     -- ft = { "r", "rmd" },
     -- build = ":call RBuild()",
+    lazy = false,
     opts = {
       -- hook = {
       --   after_config = function()
@@ -21,11 +22,11 @@ return {
     dependencies = { "saghen/blink.cmp" },
     config = function()
       -- print(os.date("%H:%M:%S"))
-      local lspconfig = require("lspconfig")
       local capabilities = require("blink.cmp").get_lsp_capabilities()
-      lspconfig.r_language_server.setup({
+      vim.lsp.config("r_language_server", {
         capabilities = capabilities,
       })
+      vim.lsp.enable("r_language_server")
     end,
   },
 }

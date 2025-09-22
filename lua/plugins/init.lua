@@ -1,5 +1,13 @@
 return {
-  { 'catppuccin/nvim', priority = 1000 },
+  {
+    'catppuccin/nvim',
+    priority = 1000,
+    config = function()
+      require("catppuccin").setup({
+        transparent_background = false,
+      })
+    end
+  },
   -- { 'vim-airline/vim-airline' },
   -- {
   --   'nvim-lualine/lualine.nvim',

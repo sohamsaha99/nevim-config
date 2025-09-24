@@ -10,6 +10,11 @@ return {
   dependencies = { 'echasnovski/mini.nvim' },
   event = "VeryLazy",
   config = function()
+    -- Add separator between split panes, otherwise indistinguishable with transparent backgrounds
+    vim.opt.fillchars = {
+      stl = "─",
+      stlnc = "─",
+    }
     -- Import fidget spinner for CodeCompanion
     local cc_spinner = require("plugins.AI_coding.status")
     -- Custom Lualine component to show attached language server
@@ -34,7 +39,7 @@ return {
     -- custom_catppuccin.visual.b.fg = "#cad3f5"
     -- custom_catppuccin.replace.b.fg = "#cad3f5"
     -- custom_catppuccin.command.b.fg = "#cad3f5"
-    -- custom_catppuccin.inactive.b.fg = "#cad3f5"
+    -- custom_catppuccin.inactive.a.bg = "#1e2030"
     --
     -- custom_catppuccin.normal.c.fg = "#6e738d"
     -- custom_catppuccin.normal.c.bg = "#1e2030"

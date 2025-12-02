@@ -7,7 +7,7 @@
 return {
   "nvim-lualine/lualine.nvim",
   -- dependencies = { "nvim-tree/nvim-web-devicons" },
-  dependencies = { 'echasnovski/mini.nvim' },
+  dependencies = { 'nvim-mini/mini.nvim' },
   event = "VeryLazy",
   config = function()
     -- Add separator between split panes, otherwise indistinguishable with transparent backgrounds

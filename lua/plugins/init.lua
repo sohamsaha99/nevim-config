@@ -8,10 +8,17 @@ return {
       })
     end
   },
+  {
+    'nvim-mini/mini.nvim',
+    version = false,
+    config = function()
+      require('mini.align').setup()
+    end
+  },
   -- { 'vim-airline/vim-airline' },
   -- {
   --   'nvim-lualine/lualine.nvim',
-  --   dependencies = { 'echasnovski/mini.nvim' }
+  --   dependencies = { 'nvim-mini/mini.nvim' }
   -- },
   {
     "mason-org/mason.nvim",

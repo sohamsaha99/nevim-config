@@ -78,5 +78,14 @@
         "prefix": "@math",
         "body": ["\\[", "\t$TM_SELECTED_TEXT$1", "\\]"],
         "description": "Display Math"
+    },
+    "myDarkmode": {
+      "prefix": ["darkmode", "\\darkmode"],
+      "body": [
+        "% make it a little easier on the eyes",
+        "\\pagecolor[rgb]{0.19,0.19,0.19} %black",
+        "\\color[rgb]{0.8, 0.8, 0.8} %grey"
+      ],
+      "description": "Include option for setting darkmode colors."
     }
 }

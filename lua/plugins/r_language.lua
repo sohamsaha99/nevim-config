@@ -16,18 +16,18 @@ return {
   },
 
   -- LSP: R languageserver (install in R: install.packages("languageserver"))
-  {
-    "neovim/nvim-lspconfig",
-    -- ft = { "r", "rmd", "quarto" },
-    dependencies = { "saghen/blink.cmp" },
-    config = function()
-      -- print(os.date("%H:%M:%S"))
-      local capabilities = require("blink.cmp").get_lsp_capabilities()
-      vim.lsp.config("r_language_server", {
-        capabilities = capabilities,
-      })
-      vim.lsp.enable("r_language_server")
-    end,
-  },
+  -- {
+  --   "neovim/nvim-lspconfig",
+  --   -- ft = { "r", "rmd", "quarto" },
+  --   dependencies = { "saghen/blink.cmp" },
+  --   config = function()
+  --     -- print(os.date("%H:%M:%S"))
+  --     local capabilities = require("blink.cmp").get_lsp_capabilities()
+  --     vim.lsp.config("r_language_server", {
+  --       capabilities = capabilities,
+  --     })
+  --     vim.lsp.enable("r_language_server")
+  --   end,
+  -- },
 }
 
